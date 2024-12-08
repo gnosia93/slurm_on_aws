@@ -6,6 +6,8 @@
   - gather
   - all gather ( = boradcasts from all nodes ) 
 
+* [Platform](https://slurm.schedmd.com/platforms.html)
+
 
 ## 레퍼런스 ##
 

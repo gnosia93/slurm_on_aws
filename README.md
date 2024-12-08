@@ -24,6 +24,11 @@
 * [slurm install](https://slurm.schedmd.com/quickstart_admin.html)
 
 
+## install ##
+
+* https://southgreenplatform.github.io/trainings/hpc/slurminstallation/
+
+
 ## pytorch training ##
 
 * [Multi-node-training on slurm with PyTorch](https://gist.github.com/TengdaHan/1dd10d335c7ca6f13810fff41e809904)

@@ -24,6 +24,11 @@
 * [slurm install](https://slurm.schedmd.com/quickstart_admin.html)
 * [Slurm vs LSF vs Kubernetes 스케줄러 비교](https://www.clunix.com/insight/it_trends.php?boardid=ittrend&mode=view&idx=735)
 
+## lustre ##
+
+* https://www.lustre.org/
+
+
 ## install ##
 
 * https://southgreenplatform.github.io/trainings/hpc/slurminstallation/

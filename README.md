@@ -1,5 +1,8 @@
 # slurm_on_aws
 
+## install ##
+
+* https://github.com/lopentusska/slurm_ubuntu_gpu_cluster
 
 ## tutorials ##
 * https://research-computing.git-pages.rit.edu/docs/slurm_quick_start_tutorial.html#1---getting-started-with-slurm

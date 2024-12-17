@@ -27,7 +27,7 @@
 ## lustre ##
 
 * https://www.lustre.org/
-
+* [Lustre 파일 시스템 설치 - (1) 설치 환경 구성](https://cjy2181.tistory.com/3)
 
 ## install ##
 

@@ -9,8 +9,8 @@ module "ec2_sg" {
 
   ingress_with_cidr_blocks = [
     {
-      from_port   = 2375
-      to_port     = 2376
+      from_port   = 22
+      to_port     = 22
       protocol    = "tcp"
       cidr_blocks = module.vpc.vpc_cidr_block
       description = "docker for remote access"

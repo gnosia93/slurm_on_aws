@@ -8,7 +8,8 @@ The G5g instances are also a cost-effective platform for machine learning infere
 
 ## cuda driver install instruction ##
 
-* https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/3bf863cc.pub
+* The new GPG public key for the CUDA repository
+  https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/3bf863cc.pub
 
 ## reference ##
 

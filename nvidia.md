@@ -29,8 +29,7 @@ You can find the latest information about the CUDA GPG key in the NVIDIA CUDA in
 
 
 ```
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/sbsa/cuda-keyring_1.1-1_all.deb
-
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/sbsa/cuda-keyring_1.1-1_all.deb && \
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 ```
 

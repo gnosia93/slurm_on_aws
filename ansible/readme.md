@@ -23,7 +23,6 @@ $ ansible-playbook playbook.yml -i ansible_hosts --user ubuntu --key-file ~/aws-
   * https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
   * https://www.baeldung.com/linux/user-account-without-password
 
-  * Solution:  
   ```
   password: ''            # login without password with '' or passwd -d slurm at tty
   ```

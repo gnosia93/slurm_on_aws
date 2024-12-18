@@ -6,6 +6,13 @@ With G5g instances, game streaming customers can run Android games natively on A
 The G5g instances are also a cost-effective platform for machine learning inference. They are ideal for deploying deep learning applications that need access to NVIDIA GPUs and their associated AI libraries.
 
 
+## Linux Distribution Information ##
+```
+cat /etc/os-release
+
+uname -m
+```
+
 ## cuda driver install instruction ##
 
 * The new GPG public key for the CUDA repository

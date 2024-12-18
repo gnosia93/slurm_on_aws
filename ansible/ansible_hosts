@@ -1,1 +1,8 @@
+# modify below ips depending on your cluster ips
+[master]
+43.200.7.126
 
+[workers]
+3.38.185.12
+3.36.95.65
+3.36.120.36

@@ -7,7 +7,7 @@
 
 ## Get Started ##
 
-* [1. 클러스터 설치하기](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/1.provison.md)
+* [1. Slurm Cluster Provisoning](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/1.provison.md)
 
 
 

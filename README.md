@@ -1,5 +1,7 @@
 # slurm_on_aws
 
+![](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/slurm-ws-arch.png)
+
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/accelrated-ec2.png)
 
 ## install ##

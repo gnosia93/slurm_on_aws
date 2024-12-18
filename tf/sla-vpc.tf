@@ -20,7 +20,7 @@ module "vpc" {
   cidr = "10.0.0.0/16"
 
   azs             = ["ap-northeast-2a", "ap-northeast-2c"]
-  private_subnets = ["10.0.0.0/22", "10.0.4.0/22"]
+#  private_subnets = ["10.0.0.0/22", "10.0.4.0/22"]
   public_subnets  = ["10.0.100.0/22", "10.0.104.0/22"]
 
   enable_nat_gateway  = false

@@ -15,19 +15,10 @@ uname -m
 
 ## cuda driver install instruction ##
 
-The GPG public key for the CUDA repository is currently listed as "d42d0685". This key is used to verify the authenticity of CUDA packages when installing them on Linux systems using package managers like "dnf". 
-Key points about the CUDA GPG key:
-Purpose:
-It ensures that the CUDA packages you download are not tampered with and come from a trusted source. 
-How to use:
-When installing CUDA on a fresh Linux system, the package manager will usually prompt you to accept the new GPG key. 
-Where to find it:
-You can find the latest information about the CUDA GPG key in the NVIDIA CUDA installation guide for Linux
-
-* The new GPG public key for the CUDA repository
+* The new GPG public key for the CUDA repository for dnf package manager
   https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/3bf863cc.pub
 
-
+* just for ubuntu apt-get
 ```
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/sbsa/cuda-keyring_1.1-1_all.deb && \
 sudo dpkg -i cuda-keyring_1.1-1_all.deb

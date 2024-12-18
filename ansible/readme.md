@@ -23,10 +23,10 @@ $ ansible-playbook playbook.yml -i ansible_hosts --user ubuntu --key-file ~/aws-
   * https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
   * https://www.baeldung.com/linux/user-account-without-password
 
-solution:  
-```
-password: ''            # login without password with '' or passwd -d slurm at tty
-```
+  * Solution:  
+  ```
+  password: ''            # login without password with '' or passwd -d slurm at tty
+  ```
 
 ## 레퍼런스 ##
 * https://github.com/lopentusska/slurm_ubuntu_gpu_cluster

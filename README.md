@@ -7,7 +7,7 @@
 
 ## Get Started ##
 
-* [1. Slurm Cluster Provisoning](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/1.provison.md)
+* [1. Slurm Cluster Provison](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/1.provison.md)
 
 
 

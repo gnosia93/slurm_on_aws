@@ -1,3 +1,5 @@
+## Simple Example ##
+
 ```
 cat <<_EOF > playbook.yml
 - name: get date from workers
@@ -14,10 +16,11 @@ $ ansible-playbook playbook.yml -i ansible_hosts --user ubuntu --key-file ~/aws-
 ```
 
 
+## Configuration Findings ##
 
-* [Create user with option --disabled-password by Ansible
-](https://stackoverflow.com/questions/39013796/create-user-with-option-disabled-password-by-ansible)
-
+* Create user with option --disabled-password by Ansible
+  * https://stackoverflow.com/questions/39013796/create-user-with-option-disabled-password-by-ansible
+  * https://docs.ansible.com/ansible/latest/collections/ansible/builtin/user_module.html
 
 
 

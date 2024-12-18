@@ -17,6 +17,12 @@ $ ansible-playbook playbook.yml -i ansible_hosts --user ubuntu --key-file ~/aws-
 
 
 ## Ansible Configuration Findings ##
+* Ansible Config Location Priority
+  * ANSIBLE_CONFIG (environment variable if set)
+  * ansible.cfg (in the current directory)
+  * ~/.ansible.cfg (in the home directory)
+  * /etc/ansible/ansible.cfg
+
 
 * Create user with option --disabled-password by Ansible
   * https://stackoverflow.com/questions/39013796/create-user-with-option-disabled-password-by-ansible

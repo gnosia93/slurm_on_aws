@@ -2,6 +2,8 @@
 
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/slurm-ws-arch.png)
 
+
+### Accelerated Gravition EC2 Price ##
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/accelrated-ec2.png)
 
 ## install ##

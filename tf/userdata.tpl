@@ -26,3 +26,5 @@ cd efs-utils
 sudo apt install -y ./build/amazon-efs-utils*deb
 sudo mkdir /mnt/efs
 sudo chmod 0777 /mnt/efs
+sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs
+

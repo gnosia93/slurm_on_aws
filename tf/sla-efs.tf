@@ -49,6 +49,7 @@ module "efs" {
   }
 
   # Access point(s)
+/*
   access_points = {
     root_example = {
       root_directory = {
@@ -60,7 +61,8 @@ module "efs" {
         }
       }
     }
-  } 
+  }
+*/
 
   tags = {
     Terraform   = "true"

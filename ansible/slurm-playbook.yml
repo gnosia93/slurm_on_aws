@@ -68,7 +68,7 @@
           - munge
           state: present
       - name: copy munge.key from /mnt/efs
-          ansible.builtin.copy:
+        ansible.builtin.copy:
             src:  /mnt/efs/munge.key
             dest: /etc/munge/munge.key
             owner: munge
@@ -76,7 +76,7 @@
             mode: "0400"
             remote_src: true
        - name: enable service
-          ansible.builtin.systemd_service:
+         ansible.builtin.systemd_service:
             name: munge
             state: started
             enabled: true

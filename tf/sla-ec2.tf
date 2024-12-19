@@ -87,7 +87,7 @@ module "slurm-worker-grv" {
   for_each = toset(["w1", "w2", "w3"])
   name = "sle-${each.key}"
 
-  instance_type          = "g5g.xlarge"
+  instance_type          = "c7g.2xlarge"
   ami                    = data.aws_ami.ubuntu-arm.id
   key_name               = var.key_pair
   monitoring             = true

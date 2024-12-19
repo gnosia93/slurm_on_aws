@@ -33,7 +33,7 @@ module "efs" {
     "ap-northeast-2a" = {
       subnet_id = module.vpc.public_subnets[0]
     }
-    "ap-northeast-2b" = {
+    "ap-northeast-2c" = {
       subnet_id = module.vpc.public_subnets[1]
     }
   }

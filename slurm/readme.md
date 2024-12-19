@@ -1,7 +1,7 @@
 
 
 
-## slurm install ##
+## Super Quick Start ##
 
 * Download source from https://www.schedmd.com/download-slurm/
 
@@ -21,7 +21,6 @@
 
 
 
-Super Quick Start 
 * Make sure the clocks, users and groups (UIDs and GIDs) are synchronized across the cluster.
 * Install MUNGE for authentication. Make sure that all nodes in your cluster have the same munge.key. Make sure the MUNGE daemon, munged, is started before you start the Slurm daemons.
 Download the latest version of Slurm.

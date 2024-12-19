@@ -81,6 +81,40 @@ module "slurm-master" {
   }
 }
 
+module "slurm-worker-grv" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+
+  for_each = toset(["w1", "w2", "w3"])
+  name = "sle-${each.key}"
+
+  instance_type          = "g5g.xlarge"
+  ami                    = data.aws_ami.ubuntu-arm.id
+  key_name               = var.key_pair
+  monitoring             = true
+  vpc_security_group_ids = [module.ec2_sg.security_group_id]
+  subnet_id              = module.vpc.public_subnets[0]
+  associate_public_ip_address	= "true" 
+
+  root_block_device      = [ 
+    {
+      volume_size = 100       # in GB 
+      volume_type = "gp3"
+    }
+  ]
+
+  user_data              = templatefile("${path.module}/userdata.tpl", {
+      EFS_ID = module.efs.id
+  })
+
+  depends_on = [ module.efs ]
+
+
+  tags = {
+    Terraform   = "true"
+    Environment = "dev"
+  }
+}
+
 
 module "slurm-worker" {
   source  = "terraform-aws-modules/ec2-instance/aws"
@@ -122,6 +156,7 @@ output "master" {
 
 output "workers" {
   value = [for instance in module.slurm-worker : instance.public_ip]
+  value = [for instance in module.slurm-worker-grv : instance.public_ip]
 }
 
 output "efs-id" {

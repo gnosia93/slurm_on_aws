@@ -51,7 +51,7 @@ module "lustre_persist" {
   # Security group
   security_group_ingress_rules = {
     in = {
-      cidr_ipv4   = [ module.vpc.vpc_cidr ]
+      cidr_ipv4   = [ module.vpc.cidr ]
       from_port   = 0
       to_port     = 0
       protocol    = "tcp"

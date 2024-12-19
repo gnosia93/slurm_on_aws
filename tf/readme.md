@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/terraform.png" width="15%">
 </p>
-
+<br>
 
 ## EFS ##
 

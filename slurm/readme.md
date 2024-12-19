@@ -3,15 +3,6 @@
 
 ## Super Quick Start ##
 
-* Download source from https://www.schedmd.com/download-slurm/
-
-* As of Dec 20 2024, version 24.11.0 is the lastest version, and download url is https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2  
-
-
-
-
-
-
 
 * Make sure the clocks, users and groups (UIDs and GIDs) are synchronized across the cluster.
     - NOTE: The SlurmUser must exist prior to starting Slurm and must exist on all nodes of the cluster.
@@ -21,6 +12,8 @@
 * Install Slurm using one of the following methods:
   * Build Manually from source (for developers or advanced users)
   * NOTE: The parent directories for Slurm's log files, process ID files, state save directories, etc. are not created by Slurm. They must be created and made writable by SlurmUser as needed prior to starting Slurm daemons.
+  * Download source from https://www.schedmd.com/download-slurm/
+  * As of Dec 20 2024, version 24.11.0 is the lastest version, and download url is https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2  
 
   ```
   curl https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2 -o slurm-24.11.0.tar.bz2

@@ -76,6 +76,16 @@ sudo apt install -y openjdk-17-jdk-headless
 sudo apt install -y awscli
 sudo apt install -y apache2-utils
 sudo apt install -y net-tools
+sudo apt install git
+sudo apt install -y make
+sudo apt install -y binutils
+sudo apt install -y cargo
+sudo apt install -y pkg-config
+sudo apt install -y libssl-dev
+git clone https://github.com/aws/efs-utils
+cd efs-utils
+./build-deb.sh
+sudo apt install -y ./build/amazon-efs-utils*deb
 _DATA
 
   tags = {
@@ -123,6 +133,16 @@ sudo apt install -y openjdk-17-jdk-headless
 sudo apt install -y awscli
 sudo apt install -y apache2-utils
 sudo apt install -y net-tools
+sudo apt install git
+sudo apt install -y make
+sudo apt install -y binutils
+sudo apt install -y cargo
+sudo apt install -y pkg-config
+sudo apt install -y libssl-dev
+git clone https://github.com/aws/efs-utils
+cd efs-utils
+./build-deb.sh
+sudo apt install -y ./build/amazon-efs-utils*deb
 _DATA
 
   tags = {

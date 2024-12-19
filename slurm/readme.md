@@ -20,15 +20,17 @@
       tar -xaf slurm-24.11.0.tar.bz2
       cd slurm-24.11.0
       ./configure
-      ./make install
+      sudo make install
       ```
 
 * Install the configuration file in `<sysconfdir>`/slurm.conf.
   * NOTE: You will need to install this configuration file on all nodes of the cluster.
-  * <sysconfdir> is /usr/local if you compile source code by your self and didn't set prefix  
+  * `<sysconfdir>` is /usr/local if you compile source code by your self and didn't set prefix  
+
 * systemd (optional): enable the appropriate services on each system:
   * Controller: sudo systemctl enable slurmctld
   * Database: sudo systemctl enable slurmdbd
   * Compute Nodes: sudo systemctl enable slurmd
+
 * Start the slurmctld and slurmd daemons.
   * eg. sudo systemctl start slurmctld

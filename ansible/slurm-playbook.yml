@@ -33,16 +33,20 @@
         password: ''             # login without password with '' or passwd -d slurm at tty
 
 - name: install munge
+  hosts: master
   become: yes
   tasks:
     - name: master install
-      hosts: master
       ansible.builtin.apt:
         pkg:
         - libmunge-dev 
         - libmunge2 
         - munge
       state: present
-        
-      
+    - name: Enable service munge
+      ansible.builtin.systemd_service:
+        name: munge
+        state: started
+        enabled: true
+
     

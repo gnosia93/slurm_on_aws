@@ -1,5 +1,6 @@
 # https://registry.terraform.io/modules/terraform-aws-modules/fsx/aws/latest/submodules/lustre
 
+/*
 module "lustre_persist" {
   source = "terraform-aws-modules/fsx/aws//modules/lustre"
 
@@ -26,7 +27,7 @@ module "lustre_persist" {
   subnet_ids                    = [ module.vpc.public_subnets[1] ]
 
   # Data Repository Association(s)
-/*
+
   data_repository_associations = {
     example = {
       batch_import_meta_data_on_create = true
@@ -46,7 +47,7 @@ module "lustre_persist" {
       }
     }
   }
-  */
+  
 
   # Security group
   security_group_ingress_rules = {
@@ -70,3 +71,4 @@ module "lustre_persist" {
     Environment = "dev"
   }
 }
+*/

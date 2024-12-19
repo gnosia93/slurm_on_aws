@@ -6,7 +6,8 @@
 * [Add EFS to an Amazon Linux 2 AWS EC2 Instance with Terraform](https://medium.com/@wblakecannon/add-efs-to-an-amazon-linux-2-aws-ec2-instance-with-terraform-bb073b6de7)
 * [EFS 설정](https://my-studyroom.tistory.com/entry/AWS-%EC%8B%A4%EC%8A%B5-EFSElastic-File-System-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0)
 * https://registry.terraform.io/modules/terraform-aws-modules/efs/aws/latest
-
+* https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file.html#attributes-reference
+  
 ### 설치하기 ###
 * [step 1] 아래를 ec2 의 user_data 안에 넣어야 한다. yum 은 지원하나 ubuntu 의 경우 직접 컴파일해서 설치해야 한다.  
 ```

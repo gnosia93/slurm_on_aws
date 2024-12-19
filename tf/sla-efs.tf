@@ -30,10 +30,10 @@ module "efs" {
 
   # Mount targets / security group
   mount_targets = {
-    "ap-northeast-2" = {
+    "ap-northeast-2a" = {
       subnet_id = module.vpc.public_subnets[0]
     }
-    "ap-northeast-2" = {
+    "ap-northeast-2b" = {
       subnet_id = module.vpc.public_subnets[1]
     }
   }

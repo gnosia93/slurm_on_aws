@@ -7,15 +7,7 @@
 
 * As of Dec 20 2024, version 24.11.0 is the lastest version, and download url is https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2  
 
-* execute following commands in each node
-  ```
-  sudo apt install -y build-essential fakeroot devscripts equivs
-  curl https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2 -o slurm-24.11.0.tar.bz2
-  tar -xaf slurm-24.11.0.tar.bz2
-  cd slurm-24.11.0
-  sudo mk-build-deps --install --tool='apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends --yes' debian/control
-  debuild -b -uc -us
-  ```
+
 
 
 
@@ -29,6 +21,14 @@
 * Install Slurm using one of the following methods:
   * Build Manually from source (for developers or advanced users)
   * NOTE: The parent directories for Slurm's log files, process ID files, state save directories, etc. are not created by Slurm. They must be created and made writable by SlurmUser as needed prior to starting Slurm daemons.
+
+  ```
+  curl https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2 -o slurm-24.11.0.tar.bz2
+  tar -xaf slurm-24.11.0.tar.bz2
+  cd slurm-24.11.0
+  ./configure
+  ./make install
+  ```
 
 * Install the configuration file in <sysconfdir>/slurm.conf.
   * NOTE: You will need to install this configuration file on all nodes of the cluster.

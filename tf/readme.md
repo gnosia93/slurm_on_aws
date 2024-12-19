@@ -32,6 +32,6 @@ sudo mount -t efs -o tls fs-01d9f13a1c92ac757:/ /mnt/efs
 
 ```
 
-## templatefile ##
+## Terraform ##
 
-* https://dewble.tistory.com/entry/configuring-terraform-resources-with-files
+* [파일(file, templatefile)을 활용한 리소스 구성하기](https://dewble.tistory.com/entry/configuring-terraform-resources-with-files)

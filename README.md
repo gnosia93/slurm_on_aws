@@ -7,7 +7,7 @@ AWS Graviton processors are custom-built by AWS to deliver the best price perfor
 Launched in 2019, Graviton2 is the second generation of AWS Graviton processors. Graviton2-based instance types offer up to 40% better price performance compared to fifth generation instances.
 **AWS Graviton3 processors are optimized for ML workloads and provide twice the Single Instruction Multiple Data (SIMD) bandwidth while also supporting bfloat16.** 
 
-Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. Slurm requires no kernel modifications for its operation and is relatively self-contained. As a cluster workload manager, Slurm has three key functions. First, it allocates exclusive and/or non-exclusive access to resources (compute nodes) to users for some duration of time so they can perform work. Second, it provides a framework for starting, executing, and monitoring work (normally a parallel job) on the set of allocated nodes. Finally, it arbitrates contention for resources by managing a queue of pending work.
+Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. Slurm requires no kernel modifications for its operation and is relatively self-contained.
 
 ## Get Started ##
 

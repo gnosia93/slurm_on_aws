@@ -3,7 +3,7 @@ module "efs" {
   source = "terraform-aws-modules/efs/aws"
 
   # File system
-  name           = "slurm-fs"
+  name           = "slurm-nfs"
 
   # performance_mode                = "maxIO"
   # NB! PROVISIONED TROUGHPUT MODE WITH 256 MIBPS IS EXPENSIVE ~$1500/month

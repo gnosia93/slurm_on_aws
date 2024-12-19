@@ -13,7 +13,9 @@
    - https://github.com/vpenso/prometheus-slurm-exporter
    - https://grafana.com/grafana/dashboards/4323-slurm-dashboard/
 
-* [3. Distributed Training]
+* [3.Slurm Basic Tutorial]()
+
+* [4. Distributed Training]
   * [Multi-node-training on slurm with PyTorch](https://gist.github.com/TengdaHan/1dd10d335c7ca6f13810fff41e809904)
 
 

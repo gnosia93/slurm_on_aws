@@ -32,13 +32,13 @@
         state: present
         password: ''             # login without password with '' or passwd -d slurm at tty
 
-- name: install munge
+- name: install munge on cluster 
   hosts: master
   become: yes
   tasks:
-    - name: master munge install
+    - name: install munge on master
       block:
-        - name: master install
+        - name: install
           ansible.builtin.apt:
             pkg:
             - libmunge-dev 

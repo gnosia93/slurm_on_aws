@@ -5,7 +5,7 @@ module "efs" {
   # File system
   name           = "slurm-nfs"
 
-  # performance_mode                = "maxIO"
+  performance_mode                  = "generalPurpose"               # or maxIO
   # NB! PROVISIONED TROUGHPUT MODE WITH 256 MIBPS IS EXPENSIVE ~$1500/month
   # throughput_mode                 = "provisioned"
   # provisioned_throughput_in_mibps = 256

@@ -15,7 +15,7 @@ module "lustre_persist" {
     level = "ERROR_ONLY"
   }
 
-  per_unit_storage_throughput = 12
+  per_unit_storage_throughput = 50
 
   root_squash_configuration = {
     root_squash = "365534:65534"

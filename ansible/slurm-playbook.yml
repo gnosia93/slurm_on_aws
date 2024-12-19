@@ -75,8 +75,8 @@
             group: munge
             mode: "0400"
             remote_src: true
-       - name: enable service
-         ansible.builtin.systemd_service:
+      - name: enable service
+        ansible.builtin.systemd_service:
             name: munge
             state: started
             enabled: true

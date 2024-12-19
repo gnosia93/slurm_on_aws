@@ -104,7 +104,9 @@ module "slurm-worker" {
   user_data              = templatefile("${path.module}/userdata.tpl", {
       EFS_ID = module.efs.id
   })
-             
+
+  depends_on = [ module.efs ]
+
 
   tags = {
     Terraform   = "true"

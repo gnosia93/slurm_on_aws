@@ -13,7 +13,7 @@
   curl https://download.schedmd.com/slurm/slurm-24.11.0.tar.bz2 -o slurm-24.11.0.tar.bz2
   tar -xaf slurm-24.11.0.tar.bz2
   cd slurm-24.11.0
-  mk-build-deps -i debian/control
+  sudo mk-build-deps -i debian/control
   debuild -b -uc -us
   ```
 

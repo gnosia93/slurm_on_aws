@@ -7,9 +7,7 @@
 * [Add EFS to an Amazon Linux 2 AWS EC2 Instance with Terraform](https://medium.com/@wblakecannon/add-efs-to-an-amazon-linux-2-aws-ec2-instance-with-terraform-bb073b6de7)
 
 
-
-Ubuntu에서 sudo mount -t efs -o tls fs-d7ac42b7:/ /mnt/efs/fs1 명령어를 넣어주기 전에 다음과 같은 과정을 해야 한다.
- 
+* 아래를 ec2 의 user_data 안에 넣어야 한다. yum 은 지원하나 ubuntu 의 경우 직접 컴파일해서 설치해야 한다.  
 ```
 sudo apt install git
 git clone https://github.com/aws/efs-utils
@@ -22,4 +20,12 @@ sudo apt install -y libssl-dev
 cd efs-utils
 ./build-deb.sh
 sudo apt install -y ./build/amazon-efs-utils*deb
+```
+
+* 파일 시스템으로 마운트한다.  fs-01d9f13a1c92ac757 는 콘솔에서 조회한다. 
+```
+sudo mkdir /mnt/efs
+sudo chmod 0777 /mnt/efs
+sudo mount -t efs -o tls fs-01d9f13a1c92ac757:/ /mnt/efs
+
 ```

@@ -42,7 +42,7 @@
         - libmunge-dev 
         - libmunge2 
         - munge
-      state: present
+        state: present
     - name: Enable service munge
       ansible.builtin.systemd_service:
         name: munge

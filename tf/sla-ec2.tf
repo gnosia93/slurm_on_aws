@@ -45,6 +45,13 @@ data "aws_ami" "ubuntu-arm64-nvidia" {
 }
 
 
+data "template_file" "script" {
+  template = "${file("script.tpl")}"
+  vars = {
+    efs_id = "${aws_efs_file_system.efs.id}"
+  }
+}
+
 
 module "slurm-master" {
   source  = "terraform-aws-modules/ec2-instance/aws"

@@ -67,7 +67,7 @@ module "slurm-master" {
   ]
   
   user_data              = templatefile("${path.module}/userdata.tpl", {
-    instance_name = "MyEC2Instance"
+     EFS_ID = module.efs.id
   })
 
   tags = {
@@ -99,7 +99,7 @@ module "slurm-worker" {
   ]
 
   user_data              = templatefile("${path.module}/userdata.tpl", {
-      EFS_ID = "MyEC2Instance"
+      EFS_ID = module.efs.id
   })
              
 

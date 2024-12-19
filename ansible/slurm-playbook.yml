@@ -31,3 +31,18 @@
         group: slurm
         state: present
         password: ''             # login without password with '' or passwd -d slurm at tty
+
+- name: install munge
+  become: yes
+  tasks:
+    - name: master install
+      hosts: master
+      ansible.builtin.apt:
+        pkg:
+        - libmunge-dev 
+        - libmunge2 
+        - munge
+      state: present
+        
+      
+    

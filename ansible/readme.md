@@ -1,4 +1,6 @@
-<img src = "https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/ansible.png" align="center" width="20%" height="20%">
+<p align="center">
+  <img src = "https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/images/ansible.png" align="center" width="20%" height="20%">
+</p>
 
 ## Simple Example ##
 

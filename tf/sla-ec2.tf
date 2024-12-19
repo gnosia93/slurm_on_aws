@@ -99,7 +99,7 @@ module "slurm-worker" {
   ]
 
   user_data              = templatefile("${path.module}/userdata.tpl", {
-    instance_name = "MyEC2Instance"
+      EFS_ID = "MyEC2Instance"
   })
              
 

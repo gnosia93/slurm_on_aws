@@ -24,7 +24,6 @@ module "lustre_persist" {
   storage_capacity              = 1200
   storage_type                  = "SSD"
   subnet_ids                    = ["subnet-abcde012"]
-  weekly_maintenance_start_time = "1:06:00"
 
   # Data Repository Association(s)
 /*

@@ -17,6 +17,7 @@
   hosts: all
   tasks:
   - name: generate file
+    become: yes
     blockinfile:
       backup: yes
       path: /etc/hosts

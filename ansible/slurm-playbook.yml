@@ -1,8 +1,8 @@
 - hosts: all
   gather_facts: yes
   tasks:
-    - debug:
-        msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4.address }}"
+#    - debug:
+#        msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4.address }}"
     - ansible.builtin.debug:
       var: hostvars[inventory_hostname]
       verbosity: 4

@@ -26,8 +26,8 @@ sudo apt install -y ./build/amazon-efs-utils*deb
 sudo mkdir /mnt/efs
 sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs
 sudo chmod 0777 /mnt/efs
-sudo hostnamectl set-hostname ${HOST_NAME}
-sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
+#sudo hostnamectl set-hostname ${HOST_NAME}
+#sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
 
 #cloud-config	
 runcmd:

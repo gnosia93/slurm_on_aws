@@ -39,7 +39,20 @@ $ ansible-playbook playbook.yml -i ansible_hosts --user ubuntu --key-file ~/aws-
 
 * Ansible: Add IPs from inventory to /etc/hosts of all nodes
   * https://serverfault.com/questions/832799/ansible-add-ips-from-inventory-to-etc-hosts-of-all-nodes
-
+  ```
+  - name: update /etc/hosts
+  hosts: all
+  tasks:
+  - name: update /etc/hosts
+    become: yes
+    blockinfile:
+      backup: yes
+      path: /etc/hosts
+      block: |
+        {% for host in groups['all'] %} 
+        {{ hostvars[host]['ansible_facts']['ens5']['ipv4']['address'] }} {{ hostvars[host]['ansible_facts']['hostname'] }} 
+        {% endfor %}
+  ```
 
 ## Reference ##
 

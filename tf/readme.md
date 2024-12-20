@@ -6,6 +6,8 @@
 ## Get your IP ##
 * https://whatismyipaddress.com/#google_vignette
 
+## Modify EC2 hostname ##
+* https://www.cyberciti.biz/faq/set-change-hostname-in-amazon-linux-ec2-instance-server/
 
 ## EFS ##
 

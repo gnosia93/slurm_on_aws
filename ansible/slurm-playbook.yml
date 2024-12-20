@@ -91,5 +91,6 @@
           cd slurm-24.11.0
           ./configure
           sudo make install  
-           
+        register: out
+      - debug: var=out.stdout_lines      
         

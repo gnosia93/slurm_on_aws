@@ -13,6 +13,22 @@
 * https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/user-data.html
 * https://discuss.hashicorp.com/t/terraform-passing-variables-from-resource-to-cloudinit-data-block/51143
 * https://grantorchard.com/dynamic-cloudinit-content-with-terraform-file-templates/
+
+
+[userdata.tpl]
+```
+...
+sudo mkdir /mnt/efs
+sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs
+sudo chmod 0777 /mnt/efs
+#sudo hostnamectl set-hostname ${HOST_NAME}
+#sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
+
+#cloud-config	
+runcmd:
+- sudo hostnamectl set-hostname ${HOST_NAME}
+- sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/hosts
+```
           
 ## EFS ##
 

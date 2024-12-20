@@ -31,5 +31,6 @@ sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
 
 #cloud-config	
 runcmd:
-- hostnamectl set-hostname ${HOST_NAME}
+- sudo hostnamectl set-hostname ${HOST_NAME}
+- sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
 

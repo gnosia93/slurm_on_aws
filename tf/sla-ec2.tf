@@ -69,7 +69,7 @@ module "slurm-master" {
   ]
   
   user_data              = templatefile("${path.module}/userdata.tpl", {
-     EFS_ID = module.efs.id.
+     EFS_ID = module.efs.id,
      HOST_NAME = module.slurm-master.name
   })
 

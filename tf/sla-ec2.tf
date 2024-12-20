@@ -77,7 +77,7 @@ module "slurm-master" {
 
   provisioner "remote-exec" {  
     inline = [
-      "sudo hostnamectl set-hostname sl-${each.key}"
+      "sudo hostnamectl set-hostname sl-${each.key}", 
       "sudo sed -i '/127.0.0.1 localhost/ s/$/ sl-\${each.key}/' /etc/hosts"
     ]
   }

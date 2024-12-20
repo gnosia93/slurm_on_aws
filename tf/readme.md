@@ -12,7 +12,7 @@
 * https://stackoverflow.com/questions/67569017/need-terraform-entry-to-change-hostname-of-newly-created-ec2-instance-using-r
 * https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/user-data.html
 * https://discuss.hashicorp.com/t/terraform-passing-variables-from-resource-to-cloudinit-data-block/51143
-* https://grantorchard.com/dynamic-cloudinit-content-with-terraform-file-templates/
+* https://grantorchard.com/dynamic-cloudinit-content-with-terraform-file-templates/   
   [ec2.tf]
   ```
   module "slurm-worker-grv" {
@@ -31,7 +31,6 @@
     ...
     
   ```
-
   [userdata.tpl]
   ```
   ...

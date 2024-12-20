@@ -6,7 +6,6 @@ sudo apt install -y make
 sudo apt install -y binutils 
 sudo apt install -y pkg-config 
 sudo apt install -y libssl-dev 
-# sudo apt --fix-broken install -y 
 sudo apt install -y cargo 
 git clone https://github.com/aws/efs-utils 
 cd efs-utils  

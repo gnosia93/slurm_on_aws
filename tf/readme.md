@@ -8,7 +8,8 @@
 
 ## Modify EC2 hostname ##
 * https://www.cyberciti.biz/faq/set-change-hostname-in-amazon-linux-ec2-instance-server/
-
+* https://stackoverflow.com/questions/9591744/how-to-add-to-the-end-of-lines-containing-a-pattern-with-sed-or-awk
+  
 ## EFS ##
 
 * [Add EFS to an Amazon Linux 2 AWS EC2 Instance with Terraform](https://medium.com/@wblakecannon/add-efs-to-an-amazon-linux-2-aws-ec2-instance-with-terraform-bb073b6de7)

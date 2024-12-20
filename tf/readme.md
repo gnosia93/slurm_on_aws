@@ -44,6 +44,8 @@
   sudo echo ${EFS_ID} >> /home/ubuntu/userdata_output.txt 2>&1
   sudo echo ${HOST_NAME} >> /home/ubuntu/userdata_output.txt 2>&1
   ```
+  #### cloud-init log file ##
+  * /var/log/cloud-init-output.log
           
 ## EFS ##
 

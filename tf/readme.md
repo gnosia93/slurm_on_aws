@@ -14,21 +14,39 @@
 * https://discuss.hashicorp.com/t/terraform-passing-variables-from-resource-to-cloudinit-data-block/51143
 * https://grantorchard.com/dynamic-cloudinit-content-with-terraform-file-templates/
 
+  [ec2.tf]
+  ```
+  module "slurm-worker-grv" {
+    source  = "terraform-aws-modules/ec2-instance/aws"
+  
+    for_each = toset(["w1", "w2", "w3"])
+    name = "sle-${each.key}"
+  
+    ...
+  
+    user_data              = templatefile("${path.module}/userdata.tpl", {
+        EFS_ID = module.efs.id,
+        HOST_NAME = "sle-${each.key}"
+    })
+  
+    ...
+    
+  ```
 
-[userdata.tpl]
-```
-...
-sudo mkdir /mnt/efs
-sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs
-sudo chmod 0777 /mnt/efs
-#sudo hostnamectl set-hostname ${HOST_NAME}
-#sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
-
-#cloud-config	
-runcmd:
-- sudo hostnamectl set-hostname ${HOST_NAME}
-- sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/hosts
-```
+  [userdata.tpl]
+  ```
+  ...
+  sudo mkdir /mnt/efs
+  sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs
+  sudo chmod 0777 /mnt/efs
+  #sudo hostnamectl set-hostname ${HOST_NAME}
+  #sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/host
+  
+  #cloud-config	
+  runcmd:
+  - sudo hostnamectl set-hostname ${HOST_NAME}
+  - sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/hosts
+  ```
           
 ## EFS ##
 

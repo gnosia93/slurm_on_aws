@@ -75,6 +75,12 @@ module "slurm-master" {
 
   depends_on = [ module.efs ]
 
+  provisioner "remote-exec" {  
+    inline = [
+      "sudo hostnamectl set-hostname sl-${each.key}"
+      "sudo sed -i '/127.0.0.1 localhost/ s/$/ sl-\${each.key}/' /etc/hosts"
+    ]
+  }
 
   tags = {
     Terraform   = "true"

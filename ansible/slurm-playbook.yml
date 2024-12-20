@@ -94,4 +94,13 @@
           sudo make install  
         register: out
       - debug: var=out.stdout_lines      
-        
+
+- name: copy slurm.conf/gres.conf to slurm cluster
+  hosts: all
+  become: yes
+  remote_user: slurm
+  tasks:
+    - name: copy files from local
+      copy:
+        src: ~/slurm-on-grv/slurm/conf/*
+        dest: /usr/local/etc

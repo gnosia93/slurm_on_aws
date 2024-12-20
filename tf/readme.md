@@ -30,7 +30,8 @@
   
     ...    
   ```
-  * [userdata.tpl]
+  #### [userdata.tpl] ####
+  if there is `#cloud-config` in userdata template file, cloud-init daemon interprete and process the section from the line   
   ```
   ...
   sudo mkdir /mnt/efs

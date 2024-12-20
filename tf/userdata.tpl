@@ -23,11 +23,11 @@ git clone https://github.com/aws/efs-utils
 cd efs-utils
 ./build-deb.sh
 sudo apt install -y ./build/amazon-efs-utils*deb
-sudo mkdir /mnt/efs >> /home/ubunt/combined_output.txt 2>&1
-sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs >> /home/ubunt/combined_output.txt 2>&1
-sudo chmod 0777 /mnt/efs >> /home/ubunt/combined_output.txt 2>&1
-sudo hostnamectl set-hostname ${HOST_NAME} >> /home/ubunt/combined_output.txt 2>&1
-sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/hosts >> /home/ubunt/combined_output.txt 2>&1
+sudo mkdir /mnt/efs >> /home/ubuntu/combined_output.txt 2>&1
+sudo mount -t efs -o tls ${EFS_ID}:/ /mnt/efs >> /home/ubuntu/combined_output.txt 2>&1
+sudo chmod 0777 /mnt/efs >> /home/ubuntu/combined_output.txt 2>&1
+sudo hostnamectl set-hostname ${HOST_NAME} >> /home/ubuntu/combined_output.txt 2>&1
+sudo sed -i '/127.0.0.1 localhost/ s/$/ ${HOST_NAME}/' /etc/hosts >> /home/ubuntu/combined_output.txt 2>&1
 
 #cloud-config	
 #runcmd:

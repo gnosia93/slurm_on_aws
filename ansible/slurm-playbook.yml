@@ -1,11 +1,3 @@
-- name: check server's integrity 
-  hosts: all
-  gather_facts: yes
-  tasks:
-    - debug: var=ansible_hostname
-    - meta: end_play    
-
-
 
 # https://www.baeldung.com/linux/ansible-add-user-password-group
 - name: create munge and slurm user

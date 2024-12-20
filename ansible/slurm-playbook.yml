@@ -102,5 +102,20 @@
   tasks:
     - name: copy files from local
       copy:
-        src: ~/slurm-on-grv/slurm/conf/*
+        src: ~/slurm-on-grv/slurm/conf/slurm.conf
         dest: /usr/local/etc
+    - name: copy files from local
+      copy:
+        src: ~/slurm-on-grv/slurm/conf/gres.conf
+        dest: /usr/local/etc
+    - name: change owner
+      file:
+        path: /usr/local/etc/slurm.conf
+        owner: slurm
+        group: slurm
+    - name: change owner
+      file:
+        path: /usr/local/etc/gres.conf
+        owner: slurm
+        group: slurm     
+        

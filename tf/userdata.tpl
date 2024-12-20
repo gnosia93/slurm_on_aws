@@ -9,15 +9,15 @@ echo \
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin 
 sudo apt install -y jq 
 sudo apt install -y awscli 
-sudo apt install -y openjdk-17-jdk-headless 
-sudo apt install -y apache2-utils 
+# sudo apt install -y openjdk-17-jdk-headless 
+# sudo apt install -y apache2-utils 
 sudo apt install -y net-tools 
 sudo apt install -y git 
 sudo apt install -y make 
 sudo apt install -y binutils 
 sudo apt install -y pkg-config 
 sudo apt install -y libssl-dev 
-sudo apt --fix-broken install -y 
+# sudo apt --fix-broken install -y 
 sudo apt install -y cargo 
 git clone https://github.com/aws/efs-utils 
 cd efs-utils  

@@ -1,5 +1,5 @@
 - name: check server's integrity 
-  host: all
+  hosts: all
   gather_facts: yes
   tasks:
     - debug: var=ansible_hostname

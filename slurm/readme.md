@@ -45,10 +45,19 @@
 
 * Visit [Slurm Configuration Tool](https://slurm.schedmd.com/configurator.html) and make slurm.conf as you wish
 
-* Install the configuration file in `<sysconfdir>`/slurm.conf.
+* Install the configuration file in `<sysconfdir>`/slurm.conf
   * NOTE: You will need to install this configuration file on all nodes of the cluster.
-  * `<sysconfdir>` is /usr/local when you compile source code unless you set prefix  
+  * `<sysconfdir>` is /usr/local when you compile source code unless you set prefix during compile
 
+* Install the configuration file in `<sysconfdir>`/gres.conf
+  * NOTE: You will need to install this configuration file on all nodes of the cluster.
+  * gres.conf is located in same directory with slurm.conf
+  * gres.conf
+  ```
+  AutoDetect=nvml
+  ```
+  * see https://slurm.schedmd.com/gres.conf.html for more details
+  
 * systemd (optional): enable the appropriate services on each system:
   * Controller: sudo systemctl enable slurmctld
   * Database: sudo systemctl enable slurmdbd

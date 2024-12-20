@@ -13,7 +13,6 @@
 * https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/user-data.html
 * https://discuss.hashicorp.com/t/terraform-passing-variables-from-resource-to-cloudinit-data-block/51143
 * https://grantorchard.com/dynamic-cloudinit-content-with-terraform-file-templates/
-
   [ec2.tf]
   ```
   module "slurm-worker-grv" {

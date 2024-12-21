@@ -80,6 +80,24 @@ sudo dpkg -i nvidia-driver-local-repo-ubuntu2404-565.57.01_1.0-1_arm64.deb
 ```
 
 
+## G5g ##
+```
+=============================================================================
+AMI Name: Deep Learning ARM64 Base OSS Nvidia Driver GPU AMI (Ubuntu 22.04)
+Supported EC2 instances: G5g
+NVIDIA driver version: 550.127.05
+CUDA versions available: cuda-12.1 cuda-12.2 cuda-12.3
+Default CUDA version is 12.1
+
+Release notes: https://docs.aws.amazon.com/dlami/latest/devguide/appendix-ami-release-notes.html
+AWS Deep Learning AMI Homepage: https://aws.amazon.com/machine-learning/amis/
+Developer Guide and Release Notes: https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html
+Support: https://forums.aws.amazon.com/forum.jspa?forumID=263
+For a fully managed experience, check out Amazon SageMaker at https://aws.amazon.com/sagemaker
+=============================================================================
+```
+
+
 
 ## reference ##
 

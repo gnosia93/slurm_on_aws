@@ -20,3 +20,17 @@ CgroupAutomount=yes
 ConstrainCores=no
 ConstrainRAMSpace=no
 ```
+
+* /usr/local/lib/slurm/cgroup_v2.so: Does not exist or not a regular file.
+```
+slurmd: error: The option "CgroupAutomount" is defunct, please remove it from cgroup.conf.
+slurmd: debug:  Log file re-opened
+slurmd: debug3: Trying to load plugin /usr/local/lib/slurm/cgroup_v2.so
+slurmd: debug4: /usr/local/lib/slurm/cgroup_v2.so: Does not exist or not a regular file.
+slurmd: error: Couldn't find the specified plugin name for cgroup/v2 looking at all files
+slurmd: debug3: plugin_peek->_verify_syms: found Slurm plugin name:Cgroup v1 plugin type:cgroup/v1 version:0x180b00
+slurmd: error: cannot find cgroup plugin for cgroup/v2
+slurmd: error: cannot create cgroup context for cgroup/v2
+slurmd: error: Unable to initialize cgroup plugin
+slurmd: error: slurmd initialization failed
+```

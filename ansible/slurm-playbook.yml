@@ -146,12 +146,14 @@
     - name: create slrumctl logfile
       ansible.builtin.file:
         path: /var/log/slurmctld.log
+        state: touch 
         owner: slurm
         group: slurm
         mode: '0644'
     - name: create slrumctl pid
       ansible.builtin.file:
         path: /var/run/slurmctld.pid
+        state: touch 
         owner: slurm
         group: slurm
         mode: '0644'

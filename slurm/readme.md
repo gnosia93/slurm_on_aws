@@ -64,10 +64,8 @@
       * see https://slurm.schedmd.com/cgroup.conf.html
       * Check the installed version of cgroup
         ```
-        ls -la /usr/local/lib/slurm/cgroup*
-        -rw-r--r-- 1 root root 1642240 Dec 21 04:53 /usr/local/lib/slurm/cgroup_v1.a
-        -rwxr-xr-x 1 root root     974 Dec 21 04:53 /usr/local/lib/slurm/cgroup_v1.la
-        -rwxr-xr-x 1 root root  435288 Dec 21 04:53 /usr/local/lib/slurm/cgroup_v1.so
+        $ mount | grep cgrou
+        cgroup2 on /sys/fs/cgroup type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate,memory_recursiveprot)
         ```
          
 

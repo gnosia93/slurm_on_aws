@@ -62,6 +62,16 @@
    * `<sysconfdir>`/cgroup.conf
       * cgroup.conf is located in same directory with slurm.conf    
       * see https://slurm.schedmd.com/cgroup.conf.html
+
+* Make logfile and spool directory.
+    * Master Node 
+      * /var/log/slurmctld.log (owner - slurm, mode - 0664)
+      * /var/run/slrumctld.pid (owner - slurm, mode - 0664)
+      * /var/spool/slurmctld (owner - slurm, mode - 0777)
+    * Worer Node
+      * /var/log/slurmd.log (owner - slurm, mode - 0664)
+      * /var/run/slurmd.pid (owner - slurm, mode - 0664)
+      * /var/spool/slurmd (owner - slurm, mode - 0777)
   
 * systemd (optional): enable the appropriate services on each system:
   * Controller: sudo systemctl enable slurmctld

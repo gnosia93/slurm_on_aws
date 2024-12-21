@@ -149,19 +149,19 @@
         state: touch 
         owner: slurm
         group: slurm
-        mode: '0644'
+        mode: '0664'
     - name: create slrumctl pid
       ansible.builtin.file:
         path: /var/run/slurmctld.pid
         state: touch 
         owner: slurm
         group: slurm
-        mode: '0644'
+        mode: '0664'
     - name: write permission for /var/spool directory
       ansible.builtin.file:
         path: /var/spool/slurmctld
         state: directory
         owner: slurm
         group: slurm
-        mode: '0644'
+        mode: '0664'
           

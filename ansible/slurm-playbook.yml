@@ -3,7 +3,7 @@
   tasks:
     - debug:
         msg: "{{ ansible_hostname }}:{{ ansible_default_ipv4.address }}"
-- name: update /etc/hosts
+- name: gather cluster node information and update /etc/hosts of each node
   hosts: all
   tasks:
   - name: update /etc/hosts

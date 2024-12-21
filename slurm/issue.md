@@ -12,4 +12,11 @@ slurmd: error: cannot create proctrack context for proctrack/cgroup
 slurmd: error: slurmd initialization failed
 ```
 
-[solution](https://stackoverflow.com/questions/62641323/error-cgroup-namespace-freezer-not-mounted-aborting)
+[[solution]](https://stackoverflow.com/questions/62641323/error-cgroup-namespace-freezer-not-mounted-aborting)
+```
+A simple /etc/slurm/cgroup.conf with:
+
+CgroupAutomount=yes
+ConstrainCores=no
+ConstrainRAMSpace=no
+```

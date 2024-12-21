@@ -40,6 +40,8 @@ slurmd: error: slurmd initialization failed
 ```
 I had the same problem. Slurm has support for both cgroup/v1 and v2, but support for v2 is only compiled in if the dbus development files are present. So first install dbus-devel
 
+sudo apt install -y dnf
 dnf install dbus-devel
 and then run a clean Slurm build.
 ```
+  * https://askubuntu.com/questions/1438828/dbus-package-installation-is-failing-in-ubuntu22-04-chroot-environment

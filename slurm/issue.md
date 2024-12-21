@@ -1,4 +1,6 @@
 * slurmd - cgroup namespace 'freezer' not mounted. aborting
+
+[error]
 ```
 slurmd: debug3: Trying to load plugin /usr/local/lib/slurm/proctrack_cgroup.so
 slurmd: debug3: plugin_load_from_file->_verify_syms: found Slurm plugin name:Process tracking via linux cgroup freezer subsystem type:proctrack/cgroup version:0x180b00
@@ -9,3 +11,5 @@ slurmd: error: Couldn't load specified plugin name for proctrack/cgroup: Plugin 
 slurmd: error: cannot create proctrack context for proctrack/cgroup
 slurmd: error: slurmd initialization failed
 ```
+
+[solution](https://stackoverflow.com/questions/62641323/error-cgroup-namespace-freezer-not-mounted-aborting)

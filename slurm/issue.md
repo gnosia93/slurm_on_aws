@@ -52,7 +52,9 @@ Documentation=man:slurmd(8)
 
 [Service]
 Type=forking
-ExecStart=/usr/sbin/slurmd $SLURMD_OPTIONS
+User=slurm
+Group=slurm
+ExecStart=/usr/local/sbin/slurmd $SLURMD_OPTIONS
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=on-failure 
@@ -71,7 +73,9 @@ Documentation=man:slurmctld(8)
 
 [Service]
 Type=forking
-ExecStart=/usr/sbin/slurmctld $SLURMCTLD_OPTIONS
+User=slurm
+Group=slurm
+ExecStart=/usr/local/sbin/slurmctld $SLURMCTLD_OPTIONS
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=on-failure 

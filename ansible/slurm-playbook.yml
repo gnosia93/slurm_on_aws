@@ -40,6 +40,7 @@
         uid: 1111
         comment: ""
         group: munge
+        home: /home/munge
         state: present
         password: ''            # login without password with '' or passwd -d slurm at tty
     - name: Create password locked user
@@ -48,6 +49,7 @@
         uid: 1121
         comment: ""
         group: slurm
+        home: /home/slurm
         state: present
         password: ''             # login without password with '' or passwd -d slurm at tty
 

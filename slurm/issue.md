@@ -53,7 +53,10 @@ slurmd.conf --> slurmdUser=slurm 이 없었음.
 ```
 
 
-
+******
+CgroupMountpoint=PATH
+Only intended for development and testing. Specifies the PATH under which cgroup controllers should be mounted. The default PATH is /sys/fs/cgroup.
+*****
 
 
 

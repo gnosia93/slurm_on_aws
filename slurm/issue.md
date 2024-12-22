@@ -134,6 +134,8 @@ sudo chmod 0777 /system
 sudo mkdir -p /sys/fs/cgroup/system.slice/slurmstepd.scope
 sudo chmod -R 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope
 chmod 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope/slurmd/cgroup.procs
+
+slurm.conf, slurm.service pid 디렉토리를 /run/slurmp.pid 로 변경.. 
 chomd 0777 /run
 slurmd.conf --> slurmdUser=slurm 이 없었음.
 ```

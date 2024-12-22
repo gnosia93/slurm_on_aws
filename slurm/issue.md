@@ -42,7 +42,9 @@ slurmd: fatal: systemd scope for slurmstepd could not be set.
 
 * [linux systemd 서비스 추가하기](https://velog.io/@kshired/linux-systemd-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
 * https://serverfault.com/questions/1003056/why-does-slurm-fail-to-start-with-systemd-but-work-when-starting-manually 
-* `/lib/systemd/system/slurmd.service` 
+* `/lib/systemd/system/slurmd.service`
+
+master 및 worker 노드에 systemd service 파일을 만든다.
 ```
 [Unit]
 Description=Slurm node daemon
@@ -83,12 +85,14 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 ```
-
+아래는 systemctl 관련 명령어의 모음이다.
+```
+systemctl reload service-name        
 systemctl start service-name         # 등록된 서비스 시작
 systemctl status service-name        # 등록된 서비스 상태 확인 
 systemctl stop service-name          # 등록된 서비스 종료 
 systemctl enable service-name        # 재부팅 후에도 서비스가 실행되도록 설정
 journalctl -u service-name           # 서비스와 관련된 로그 확인
-
+```
 
 

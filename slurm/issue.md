@@ -40,6 +40,27 @@ slurmd: fatal: systemd scope for slurmstepd could not be set.
 
 [solution]
 
+```
+sudo mkdir -p /system
+sudo chmod 0777 /system
+sudo mkdir -p /sys/fs/cgroup/system.slice/slurmstepd.scope
+sudo chmod -R 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope
+chmod 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope/slurmd/cgroup.procs
+
+slurm.conf, slurm.service pid 디렉토리를 /run/slurmp.pid 로 변경.. 
+chomd 0777 /run
+slurmd.conf --> slurmdUser=slurm 이 없었음.
+```
+
+
+
+
+
+
+
+
+## Linux Service 추가하기 ##
+
 * [linux systemd 서비스 추가하기](https://velog.io/@kshired/linux-systemd-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%B6%94%EA%B0%80%ED%95%98%EA%B8%B0)
 * https://serverfault.com/questions/1003056/why-does-slurm-fail-to-start-with-systemd-but-work-when-starting-manually
 
@@ -98,51 +119,19 @@ sudo systemctl enable service-name        # 재부팅 후에도 서비스가 실
 sudo journalctl -u service-name           # 서비스와 관련된 로그 확인
 ```
 
-----
 
+
+
+
+## 레퍼런스 ##
+
+* https://unix.stackexchange.com/questions/197718/does-managing-cgroups-require-root-access
 * https://askubuntu.com/questions/1058635/what-is-a-systemd-scope-for 
 * https://serverfault.com/questions/900164/systemd-scope-vs-service/900167#900167
 * https://systemd.io/CONTROL_GROUP_INTERFACE/
-* 
-
-## ... ##
-----
-* https://slurm.schedmd.com/cgroup_v2.html
-
-
-* slurm 유저가 아닌 루프로 실행하면 이슈가 없는듯 하다.
-* /system 디렉토리를 만들어주고 실행하면,
-```
-slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
-slurmd: error: Cannot enable cpuset in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
-slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
-slurmd: error: Cannot enable memory in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
-slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
-slurmd: error: Cannot enable cpu in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
-slurmd: error: Cannot enable subtree_control at the top level /sys/fs/cgroup/system.slice/slurmstepd.scope/slurmd
-slurmd: error: cannot setup the scope for cgroup
-slurmd: error: Unable to initialize cgroup plugin
-slurmd: error: slurmd initialization failed
-```
-
-* https://unix.stackexchange.com/questions/197718/does-managing-cgroups-require-root-access
-
-
-```
-sudo mkdir -p /system
-sudo chmod 0777 /system
-sudo mkdir -p /sys/fs/cgroup/system.slice/slurmstepd.scope
-sudo chmod -R 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope
-chmod 0777 /sys/fs/cgroup/system.slice/slurmstepd.scope/slurmd/cgroup.procs
-
-slurm.conf, slurm.service pid 디렉토리를 /run/slurmp.pid 로 변경.. 
-chomd 0777 /run
-slurmd.conf --> slurmdUser=slurm 이 없었음.
-```
-
-
-
 * https://unix.stackexchange.com/questions/739049/limit-cpu-usage-with-cgroup-v2-as-non-root-user-permission-denied
 
 
+---
 
+https://stackoverflow.com/questions/57079707/slurm-and-munge-invalid-credential

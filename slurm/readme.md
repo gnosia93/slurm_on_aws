@@ -88,7 +88,7 @@
      ```
    * Worker Node
      ```
-     slurmd -D -vvvvv
+     slurmd -D -vvvvvv
      ```
   
 * systemd (optional): enable the appropriate services on each system:

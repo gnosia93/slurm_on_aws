@@ -58,7 +58,7 @@ User=slurm
 Group=slurm
 ExecStart=/usr/local/sbin/slurmd --systemd
 # ExecReload=/bin/kill -HUP $MAINPID
-PIDFile=/run/munge/munged.pid
+PIDFile=/var/run/slurmd.pid
 Restart=on-failure 
 
 [Install]
@@ -79,7 +79,7 @@ User=slurm
 Group=slurm
 ExecStart=/usr/local/sbin/slurmctld $SLURMCTLD_OPTIONS
 # ExecReload=/bin/kill -HUP $MAINPID
-KillMode=process
+PIDFile=/var/run/slurmctld.pid
 Restart=on-failure 
 
 [Install]

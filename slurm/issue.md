@@ -102,3 +102,4 @@ sudo journalctl -u service-name           # 서비스와 관련된 로그 확인
 
 * https://askubuntu.com/questions/1058635/what-is-a-systemd-scope-for 
 * https://serverfault.com/questions/900164/systemd-scope-vs-service/900167#900167
+* https://systemd.io/CONTROL_GROUP_INTERFACE/

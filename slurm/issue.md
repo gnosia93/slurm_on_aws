@@ -125,3 +125,5 @@ slurmd: error: Unable to initialize cgroup plugin
 slurmd: error: slurmd initialization failed
 ```
 
+* https://unix.stackexchange.com/questions/197718/does-managing-cgroups-require-root-access
+

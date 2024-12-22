@@ -1,27 +1,4 @@
-* slurmd - cgroup namespace 'freezer' not mounted. aborting
-
-[problem]
-```
-slurmd: debug3: Trying to load plugin /usr/local/lib/slurm/proctrack_cgroup.so
-slurmd: debug3: plugin_load_from_file->_verify_syms: found Slurm plugin name:Process tracking via linux cgroup freezer subsystem type:proctrack/cgroup version:0x180b00
-slurmd: error: unable to open '/sys/fs/cgroup/freezer//tasks' for reading : No such file or directory
-slurmd: error: cgroup namespace 'freezer' not mounted. aborting
-slurmd: error: unable to create freezer cgroup namespace
-slurmd: error: Couldn't load specified plugin name for proctrack/cgroup: Plugin init() callback failed
-slurmd: error: cannot create proctrack context for proctrack/cgroup
-slurmd: error: slurmd initialization failed
-```
-
-[[solution]](https://stackoverflow.com/questions/62641323/error-cgroup-namespace-freezer-not-mounted-aborting)
-```
-A simple /etc/slurm/cgroup.conf with:
-
-CgroupAutomount=yes
-ConstrainCores=no
-ConstrainRAMSpace=no
-```
-
-* /usr/local/lib/slurm/cgroup_v2.so: Does not exist or not a regular file.
+### /usr/local/lib/slurm/cgroup_v2.so: Does not exist or not a regular file ###
 [problem]
 ```
 slurmd: error: The option "CgroupAutomount" is defunct, please remove it from cgroup.conf.
@@ -50,7 +27,7 @@ ls /usr/local/lib/slurm/cgroup_v2.so
 /usr/local/lib/slurm/cgroup_v2.so
 
 
-* register systemd
+### register systemd ###
 https://serverfault.com/questions/1003056/why-does-slurm-fail-to-start-with-systemd-but-work-when-starting-manually 
 
 

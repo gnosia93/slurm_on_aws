@@ -82,6 +82,7 @@ systemctl start service-name         # 등록된 서비스 상태 확인
 systemctl status service-name        # 등록된 서비스 종료
 systemctl stop service-name          # 재부팅 후에도 서비스가 실행되도록 설정
 systemctl enable service-name        # 서비스와 관련된 로그 확인
-journalctl -u service-name           # 
+journalctl -u service-name           # 서비스와 관련된 로그 확인
+
 
 

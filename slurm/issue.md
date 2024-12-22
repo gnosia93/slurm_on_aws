@@ -105,6 +105,23 @@ sudo journalctl -u service-name           # 서비스와 관련된 로그 확인
 * https://systemd.io/CONTROL_GROUP_INTERFACE/
 * 
 
-
+## ... ##
 ----
 * https://slurm.schedmd.com/cgroup_v2.html
+
+
+* slurm 유저가 아닌 루프로 실행하면 이슈가 없는듯 하다.
+* /system 디렉토리를 만들어주고 실행하면,
+```
+slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
+slurmd: error: Cannot enable cpuset in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
+slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
+slurmd: error: Cannot enable memory in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
+slurmd: error: common_file_write_content: unable to open '/sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control' for writing: Permission denied
+slurmd: error: Cannot enable cpu in /sys/fs/cgroup/system.slice/slurmstepd.scope/cgroup.subtree_control: Permission denied
+slurmd: error: Cannot enable subtree_control at the top level /sys/fs/cgroup/system.slice/slurmstepd.scope/slurmd
+slurmd: error: cannot setup the scope for cgroup
+slurmd: error: Unable to initialize cgroup plugin
+slurmd: error: slurmd initialization failed
+```
+

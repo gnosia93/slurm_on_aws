@@ -50,9 +50,15 @@ ProctrackType=proctrack/cgroup
 ReturnToService=1 
 SchedulerType=sched/backfill 
 
+SlurmdTimeout=300 
+SlurmctldTimeout=300 
+SelectType=select/cons_tres 
+SelectTypeParameters=CR_Core_Memory 
+TaskPlugin=task/affinity 
 
-
-
+ClusterName=workshop
+NodeName=sle-w[1-2] CPUs=8 Boards=1 SocketsPerBoard=1 CoresPerSocket=8 ThreadsPerCore=1 RealMemory=15672     # slurmd -C in worker node
+PartitionName=debug Nodes=sle-w[1-2] Default=YES MaxTime=INFINITE State=UP
 ```
 
 

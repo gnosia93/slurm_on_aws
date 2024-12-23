@@ -54,6 +54,9 @@ JobCredentialPublicCertificate=/var/spool/slurm-llnl/cred_pub.pem
                       
 SlurmdLogFile=/var/log/slurm/slurmd.log                    # at the install time, /var/log/slurm exists, slurm directory mode is 777
 SlurmctldLogFile=/var/log/slurm/slurmctld.log 
+SlurmctldPidFile=/var/log/slurm/slurmctld.pid
+SlurmdPidFile=/var/log/slurm/slurmd.pid
+
 
 ProctrackType=proctrack/cgroup 
 ReturnToService=1 

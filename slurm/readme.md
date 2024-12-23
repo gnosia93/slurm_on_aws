@@ -29,6 +29,16 @@ munge:*:20080:0:99999:7:::
 slurm:*:20080:0:99999:7:::
 ```
 
+[slurm.conf]
+```
+ControlMachine=sl-mst                      # hostname of master node
+AuthType=auth/munge                        # authentification with munge
+SlurmdPort=6818                            # slurm daemon port
+SlurmctldPort=6817                         # slurm controller daemon port 
+
+StateSaveLocation=/var/spool/slurm-llnl/state 
+SlurmdSpoolDir=/var/spool/slurmd 
+```
 
 
 

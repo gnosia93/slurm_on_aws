@@ -57,7 +57,6 @@ SlurmctldLogFile=/var/log/slurm/slurmctld.log
 SlurmctldPidFile=/var/log/slurm/slurmctld.pid
 SlurmdPidFile=/var/log/slurm/slurmd.pid
 
-
 ProctrackType=proctrack/cgroup 
 ReturnToService=1 
 SchedulerType=sched/backfill 

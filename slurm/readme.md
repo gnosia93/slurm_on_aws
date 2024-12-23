@@ -38,6 +38,16 @@ SlurmctldPort=6817                         # slurm controller daemon port
 
 StateSaveLocation=/var/spool/slurm-llnl/state           # at the install time, not yet created
 SlurmdSpoolDir=/var/spool/slurmd                        # at the install time, not yet created
+SlurmdLogFile=/var/log/slurm/slurmd.log 
+SlurmctldLogFile=/var/log/slurm/slurmctld.log 
+
+ProctrackType=proctrack/cgroup 
+ReturnToService=1 
+SchedulerType=sched/backfill 
+
+
+
+
 ```
 
 

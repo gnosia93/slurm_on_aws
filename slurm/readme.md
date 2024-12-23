@@ -1,7 +1,7 @@
 * https://bgreat.tistory.com/185
 
 
-## install with apt ##
+## Install /w apt ##
 
 ```
 sudo apt install -y munge libmunge-dev               # all server.
@@ -25,7 +25,7 @@ sudo systemctl start munge                           # all server
 
 
 
-## Super Quick Start ##
+## Install /w source ##
 
 * Make sure the clocks, users and groups (UIDs and GIDs) are synchronized across the cluster.
     * clocks (time) synchronization is fullfilled usually by NTP, but when you are using public cloud service such as AWS, you don't need to setup clocks synchronization.

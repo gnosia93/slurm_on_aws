@@ -36,7 +36,10 @@ slurm:*:20080:0:99999:7:::
 [/etc/slurm/slurm.conf] 
 ```
 sudo vi /etc/slurm/slurm.conf
-sudo mdir /var/spool/slurm && suco chown slurm:slurm /var/spool/slurm && sudo chmod 777 /var/spool/slurm
+
+sudo mkdir /var/spool/slurm && \
+suco chown slurm:slurm /var/spool/slurm && \
+sudo chmod 777 /var/spool/slurm
 ```
 * must exists in all nodes
 ```

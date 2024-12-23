@@ -52,8 +52,8 @@ StateSaveLocation=/var/spool/slurm/state              # at the install time, not
 SlurmdSpoolDir=/var/spool/slurmd
 
 # 작업 자격 증명에 사용할 키 설정 
-JobCredentialPrivateKey=/var/spool/slurm-llnl/cred_priv.pem 
-JobCredentialPublicCertificate=/var/spool/slurm-llnl/cred_pub.pem 
+JobCredentialPrivateKey=/var/spool/slurm/cred_priv.pem 
+JobCredentialPublicCertificate=/var/spool/slurm/cred_pub.pem 
                       
 SlurmdLogFile=/var/log/slurm/slurmd.log                    # at the install time, /var/log/slurm exists, slurm directory mode is 777
 SlurmctldLogFile=/var/log/slurm/slurmctld.log 

@@ -27,6 +27,9 @@ slurm:*:20080:0:99999:7:::
 ```
 
 [/etc/slurm-llnl/slurm.conf] 
+```
+sudo mkdir /etc/slurm-llnl
+```
 * must exists in all nodes
 ```
 ControlMachine=sl-mst                      # hostname of master node

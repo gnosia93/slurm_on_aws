@@ -36,9 +36,7 @@ slurm:*:20080:0:99999:7:::
 
 [/etc/slurm/slurm.conf] 
 ```
-sudo mkdir /etc/slurm-llnl
-sudo vi slurm.d
-sudo chown -R slurm:slurm slurm-llnl/
+sudo vi /etc/slurm/slurm.conf
 ```
 * must exists in all nodes
 ```

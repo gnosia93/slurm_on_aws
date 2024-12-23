@@ -97,8 +97,12 @@ AllowedDevicesFile="/etc/slurm-llnl/cgroup_allowed_devices_file.conf"
 
 start slurmctld and slurmd daemon.
 ```
-ubuntu$ sudo slurmctld -D -vvvvvv                 # unbutu 로 실행하면 에러가 발생한다. 
+ubuutu$ sudo slurmctld -D -vvvvvv                 # unbutu 로 실행하면 에러가 발생한다. 
 ubuntu$ sudo slurmd -D -vvvvvv 
+```
+```
+$ ubuntu ps aux | grep slurmctld
+root       46685  0.0  0.0 280808  5668 ?        Sl   17:02   0:00 slurmctld -vvvvvv
 ```
 
 

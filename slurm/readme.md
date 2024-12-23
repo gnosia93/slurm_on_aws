@@ -1,6 +1,25 @@
 * https://bgreat.tistory.com/185
 
 
+## master node ##
+
+```
+sudo apt install -y munge libmunge-dev               # all server.
+sudo /usr/sbin/mungekey                              # copy /etc/munge/munge.key to all server
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 ## Super Quick Start ##
 
 * Make sure the clocks, users and groups (UIDs and GIDs) are synchronized across the cluster.

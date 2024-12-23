@@ -6,7 +6,6 @@
 10.0.100.182 sle-w1
 ```
 
-
 execute below command
 ```
 sudo apt install -y munge libmunge-dev               # all server.
@@ -37,6 +36,7 @@ slurm:*:20080:0:99999:7:::
 [/etc/slurm/slurm.conf] 
 ```
 sudo vi /etc/slurm/slurm.conf
+sudo mdir /var/spool/slurm && suco chown slurm:slurm /var/spool/slurm && sudo chmod 777 /var/spool/slurm
 ```
 * must exists in all nodes
 ```
@@ -45,7 +45,7 @@ AuthType=auth/munge                        # authentification with munge
 SlurmdPort=6818                            # slurm daemon port
 SlurmctldPort=6817                         # slurm controller daemon port 
 
-StateSaveLocation=/var/spool/slurm-llnl/state              # at the install time, not yet created
+StateSaveLocation=/var/spool/slurm/state              # at the install time, not yet created
 SlurmdSpoolDir=/var/spool/slurmd
 
 # 작업 자격 증명에 사용할 키 설정 
@@ -94,8 +94,8 @@ AllowedDevicesFile="/etc/slurm-llnl/cgroup_allowed_devices_file.conf"
 
 start slurmctld and slurmd daemon.
 ```
-ubuntu$ slrumctld -D -vvvvvv
-ubuntu$ sudo systemctl start slrumd 
+ubuntu$ sudo slrumctld -D -vvvvvv                 # unbutu 로 실행하면 에러가 발생한다. 
+ubuntu$ sudo slurmd -D -vvvvvv 
 ```
 
 

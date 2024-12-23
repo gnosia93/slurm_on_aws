@@ -92,6 +92,11 @@ AllowedDevicesFile="/etc/slurm-llnl/cgroup_allowed_devices_file.conf"
 /dev/nvidia1 ...
 ```
 
+start slurmctld and slurmd daemon.
+```
+sudo systemctl start slrumctld
+sudo systemctl start slrumd 
+```
 
 
 

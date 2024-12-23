@@ -7,7 +7,7 @@
 ```
 
 
-$
+execute below command
 ```
 sudo apt install -y munge libmunge-dev               # all server.
 sudo /usr/sbin/mungekey                              # make key in master server and copy /etc/munge/munge.key to all server

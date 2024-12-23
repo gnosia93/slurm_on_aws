@@ -19,7 +19,7 @@ sudo apt install -y slurmd                           # worker nodes
 
 [passwd]
 ```
-munge:x:117:122::/nonexistent:/usr/sbin/nologin
+munge:x:117:122::/nonexistent:/usr/sbin/nologin               
 slurm:x:64030:64030::/nonexistent:/usr/sbin/nologin
 ```
 
@@ -36,8 +36,8 @@ AuthType=auth/munge                        # authentification with munge
 SlurmdPort=6818                            # slurm daemon port
 SlurmctldPort=6817                         # slurm controller daemon port 
 
-StateSaveLocation=/var/spool/slurm-llnl/state 
-SlurmdSpoolDir=/var/spool/slurmd 
+StateSaveLocation=/var/spool/slurm-llnl/state           # at the install time, not yet created
+SlurmdSpoolDir=/var/spool/slurmd                        # at the install time, not yet created
 ```
 
 

@@ -1,6 +1,9 @@
 ## 1. [Install Using apt](https://bgreat.tistory.com/185) ##
 
-* efs 마운트 정보를 fstab 에 넣어야 한다. 
+* efs 마운트 정보를 fstab 에 넣어야 한다. reboot 해도 마운트 되도록 한다. 
+```
+sudo mount -t efs -o tls fs-00bec140ef39f7a3b:/ /mnt/efs
+```
 
 
 ### 1-1. append node hostname ###

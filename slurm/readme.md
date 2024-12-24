@@ -113,6 +113,12 @@ sudo slurmctld -D -vvvvvv
 sudo slurmd -D -vvvvvv 
 ```
 
+### 1-5. slurm client node ###
+```
+sudo apt install slurm-client
+```
+
+
 
 
 ## 2. Install From Source ##

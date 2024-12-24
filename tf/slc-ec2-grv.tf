@@ -31,29 +31,13 @@ data "aws_ami" "ubuntu-x86" {
 }
 
 
-data "aws_ami" "ubuntu-arm64-nvidia" {
-  most_recent = true
-  owners      = ["898082745236"]
-
-  filter {
-    name   = "name"
-    values = ["Deep Learning ARM64 Base OSS Nvidia Driver GPU AMI (Ubuntu 22.04)*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-}
-
-
-module "slurm-master" {
+module "slc-mst" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
-  for_each = toset(["mst"])
-  name = "sl-${each.key}"
+  for_each = toset(["mst", "client"])
+  name = "slc-${each.key}"
 
-  instance_type          = "c6g.xlarge"
+  instance_type          = "c7g.2xlarge"
   ami                    = data.aws_ami.ubuntu-arm.id
   key_name               = var.key_pair
   monitoring             = true
@@ -70,7 +54,7 @@ module "slurm-master" {
   
   user_data              = templatefile("${path.module}/userdata.tpl", {
      EFS_ID = module.efs.id,
-     HOST_NAME = "sl-${each.key}"
+     HOST_NAME = "slc-${each.key}"
   })
 
   depends_on = [ module.efs ]
@@ -82,14 +66,14 @@ module "slurm-master" {
   }
 }
 
-/*
-module "slurm-worker-grv" {
+
+module "slc-wg" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
-  for_each = toset(["w1", "w2"])
-  name = "sle-${each.key}"
+  for_each = toset(["wg1", "wg2"])
+  name = "slc-${each.key}"
 
-  instance_type          = "c7g.2xlarge"
+  instance_type          = "c7g.4xlarge"
   ami                    = data.aws_ami.ubuntu-arm.id
   key_name               = var.key_pair
   monitoring             = true
@@ -106,45 +90,7 @@ module "slurm-worker-grv" {
 
   user_data              = templatefile("${path.module}/userdata.tpl", {
       EFS_ID = module.efs.id,
-      HOST_NAME = "sle-${each.key}"
-  })
-
-  depends_on = [ module.efs ]
-
-
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
-*/
-
-
-module "slurm-worker-nvidia" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
-
-  for_each = toset(["w1", "w2"])
-  name = "slx-${each.key}"
-
-  instance_type          = "g5g.xlarge"
- # ami                    = data.aws_ami.ubuntu-arm64-nvidia.id
-  ami                    = data.aws_ami.ubuntu-arm.id
-  key_name               = var.key_pair
-  monitoring             = true
-  vpc_security_group_ids = [module.ec2_sg.security_group_id]
-  subnet_id              = module.vpc.public_subnets[0]
-  associate_public_ip_address	= "true" 
-
-  root_block_device      = [ 
-    {
-      volume_size = 100       # in GB 
-      volume_type = "gp3"
-    }
-  ]
-
-  user_data              = templatefile("${path.module}/userdata.tpl", {
-      EFS_ID = module.efs.id,
-      HOST_NAME = "slx-${each.key}"
+      HOST_NAME = "slc-${each.key}"
   })
 
   depends_on = [ module.efs ]
@@ -157,23 +103,15 @@ module "slurm-worker-nvidia" {
 }
 
 
-output "master" {
-  value = [for instance in module.slurm-master : instance.public_ip]
+output "slc-mst" {
+  value = [for instance in module.slc-mst : instance.public_ip]
 }
 
-/*
-output "workers-cpu" {
-  value = [for instance in module.slurm-worker-grv : instance.public_ip]
-}
-*/
 
-output "workers-gpu" {
-  value = [for instance in module.slurm-worker-nvidia : instance.public_ip]
+output "slc-wg" {
+  value = [for instance in module.slc-wg : instance.public_ip]
 }
 
-/*
-output "efs-id" {
-  value = module.efs.id
-}
-*/
+
+
 

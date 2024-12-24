@@ -173,7 +173,7 @@ sudo apt install -y nvidia-utils-560
 ```
 
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/slurm/images/nvidia-smi.png)
-
+![](https://github.com/gnosia93/slurm-on-grv/blob/main/slurm/images/nvidia-lshw.png)
 
 
 ## 2. Install From Source ##

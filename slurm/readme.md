@@ -79,14 +79,14 @@ PartitionName=debug Nodes=sle-w[1-2] Default=YES MaxTime=INFINITE State=UP
 ```
 
 [/etc/slurm/cgroup.conf] 
-* must exist in all nodes in case of using GPU, and not required for CPU
+* must exist in all nodes, for GPU node cgroup_allowed_devices_file.conf is required
 ```
 CgroupAutomount=yes 
 CgroupReleaseAgentDir="/etc/slurm/cgroup" 
 ConstrainCores=yes 
 ConstrainRAMSpace=yes 
 ConstrainDevices=yes 
-AllowedDevicesFile="/etc/slurm-llnl/cgroup_allowed_devices_file.conf"
+#AllowedDevicesFile="/etc/slurm-llnl/cgroup_allowed_devices_file.conf"           # for GPU node, uncomment this line
 ```
 
 [/etc/slurm/cgroup_allowed_devices_file.conf] 

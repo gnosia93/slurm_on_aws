@@ -1,6 +1,7 @@
 ## 1. [Install Using apt](https://bgreat.tistory.com/185) ##
 
 ### 1-1. append node hostname ###
+FQDN is preferred, but if you are using AWS, you just need to set private IP with hostname.
 
 [/etc/hosts]
 ```

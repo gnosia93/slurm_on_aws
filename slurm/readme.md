@@ -38,19 +38,6 @@ sudo chown slurm:slurm /var/spool/slurm && \
 sudo chmod 777 /var/spool/slurm
 ```
 
-* (optional) check passwd and shadow file
-  
-[passwd]
-```
-munge:x:117:122::/nonexistent:/usr/sbin/nologin               
-slurm:x:64030:64030::/nonexistent:/usr/sbin/nologin
-```
-[shadow]
-```
-munge:*:20080:0:99999:7:::
-slurm:*:20080:0:99999:7:::
-```
-
 ### 1-3. make configuration at all nodes ###
 
 **[/etc/slurm/slurm.conf]**

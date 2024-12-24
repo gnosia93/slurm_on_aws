@@ -177,6 +177,19 @@ sudo apt install -y nvidia-utils-565
 
 * https://stackoverflow.com/questions/76492996/how-to-add-nvidia-gpu-on-slurm-conf-and-gres-conf
 
+* check if nvml library is installed.
+```
+ldconfig -p | grep libnvidia-ml.so
+```
+
+
+
+
+
+
+
+
+
 ## 2. Install From Source ##
 
 * Make sure the clocks, users and groups (UIDs and GIDs) are synchronized across the cluster.

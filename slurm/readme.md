@@ -101,13 +101,14 @@ CgroupReleaseAgentDir="/etc/slurm/cgroup"
 ConstrainCores=yes 
 ConstrainRAMSpace=yes 
 ConstrainDevices=yes 
-AllowedDevicesFile="/etc/slurm/cgroup_device.conf"           # for GPU node, uncomment this line
 ```
 
-**[/etc/slurm/cgroup_device.conf]** 
+**[/etc/slurm/gres.conf]** 
 * must exist in worker nodes having GPU
 ```
-/dev/nvidia0 
+#AutoDetect=nvml
+NodeName=slx-w1 Name=gpu File=/dev/nvidia0
+NodeName=slx-w2 Name=gpu File=/dev/nvidia0
 ```
 In the Linux /dev directory, an Nvidia device will typically be named something like /dev/nvidia0, /dev/nvidia1, or similar, depending on the number of Nvidia GPUs present in the system; essentially, any file starting with "nvidia" within the /dev directory indicates an Nvidia device
 

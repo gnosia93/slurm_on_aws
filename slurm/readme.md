@@ -173,6 +173,8 @@ sudo apt install -y nvidia-utils-560
 ```
 
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/slurm/images/nvidia-smi.png)
+
+In the Linux /dev directory, an Nvidia device will typically be named something like /dev/nvidia0, /dev/nvidia1, or similar, depending on the number of Nvidia GPUs present in the system; essentially, any file starting with "nvidia" within the /dev directory indicates an Nvidia device
 ![](https://github.com/gnosia93/slurm-on-grv/blob/main/slurm/images/nvidia-lshw.png)
 
 

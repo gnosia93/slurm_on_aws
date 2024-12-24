@@ -182,6 +182,11 @@ sudo apt install -y nvidia-utils-565
 ldconfig -p | grep libnvidia-ml.so
 ```
 
+```
+sinfo -o "%20N  %10c  %10m  %25f  %10G "
+NODELIST              CPUS        MEMORY      AVAIL_FEATURES             GRES
+slx-w[1-2]            4           7763        (null)                     (null)
+```
 
 
 

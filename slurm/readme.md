@@ -39,6 +39,7 @@ sudo chmod 777 /var/spool/slurm
 ```
 
 * (optional) check passwd and shadow file
+  
 [passwd]
 ```
 munge:x:117:122::/nonexistent:/usr/sbin/nologin               

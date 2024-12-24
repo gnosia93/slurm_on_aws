@@ -159,7 +159,7 @@ nvidia-driver-565-server-open/jammy-updates 565.57.01-0ubuntu0.22.04.4 arm64
   NVIDIA driver (open kernel) metapackage
 ```
 
-* install nvidia driver with 
+* install nvidia driver with latest version
 ```
 sudo apt install nvidia-driver-560
 sudo apt install nvidia-cuda-toolkit

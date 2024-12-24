@@ -4,6 +4,7 @@
 ```
 10.0.101.186 sl-mst
 10.0.100.182 sle-w1
+10.0.100.20  sle-w2
 ```
 
 execute below command

@@ -30,6 +30,23 @@ data "aws_ami" "ubuntu-x86" {
   }
 }
 
+
+data "aws_ami" "ubuntu-arm64-nvidia" {
+  most_recent = true
+  owners      = ["898082745236"]
+
+  filter {
+    name   = "name"
+    values = ["Deep Learning ARM64 Base OSS Nvidia Driver GPU AMI (Ubuntu 22.04)*"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}
+
+
 module "slurm-master" {
   source  = "terraform-aws-modules/ec2-instance/aws"
 
@@ -159,3 +176,4 @@ output "efs-id" {
   value = module.efs.id
 }
 */
+

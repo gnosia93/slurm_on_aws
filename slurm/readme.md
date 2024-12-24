@@ -83,7 +83,7 @@ Type slurmd -C at worker node to retrieve hardware spec for `NodeName` in slurm.
 
 
 **[/etc/slurm/cgroup.conf]** 
-* must exist in all nodes, for GPU node cgroup_allowed_devices_file.conf is required
+* must exist in all worker nodes, for GPU node cgroup_allowed_devices_file.conf is required
 ```
 CgroupAutomount=yes 
 CgroupReleaseAgentDir="/etc/slurm/cgroup" 
@@ -94,7 +94,7 @@ ConstrainDevices=yes
 ```
 
 **[/etc/slurm/cgroup_allowed_devices_file.conf]** 
-* must exist in all nodes in case of using GPU, and not required for CPU
+* must exist in worker nodes having GPU
 ```
 /dev/nvidiactl 
 /dev/nvidia-uvm 

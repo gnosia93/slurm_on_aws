@@ -17,10 +17,14 @@ Slurm is an open source, fault-tolerant, and highly scalable cluster management 
 
 * [3. slurm command basic](https://github.com/gnosia93/slurm-on-grv/blob/main/tutorial/3.slurm-basic.md)
 
+* interactive Jupyter notebook
+  
 * [4. distributed training]
   * [Multi-node-training on slurm with PyTorch](https://gist.github.com/TengdaHan/1dd10d335c7ca6f13810fff41e809904)
 
+* performance comparison
 
+* trn2 cluster
 
 
 ## Reference ##

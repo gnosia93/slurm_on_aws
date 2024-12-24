@@ -166,6 +166,7 @@ sudo apt install -y nvidia-cuda-toolkit
 sudo apt install -y nvidia-utils-560
 ```
 
+![](https://github.com/gnosia93/slurm-on-grv/blob/main/slurm/images/nvidia-smi.png)
 
 
 

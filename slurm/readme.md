@@ -12,6 +12,8 @@ FQDN is preferred, but if you are using AWS, you just need to set private IP wit
 
 ### 1-2. install munge and slurm ###
 ```
+sudo systemctl mask packagekit                       # all nodes
+
 sudo apt install -y munge libmunge-dev               # all nodes
 sudo /usr/sbin/mungekey                              # make key in master node 
 sudo cp /etc/munge/munge.key /mnt/efs                # copy /etc/munge/munge.key to worker nodes

@@ -1,5 +1,8 @@
 ## 1. [Install Using apt](https://bgreat.tistory.com/185) ##
 
+* efs 마운트 정보를 fstab 에 넣어야 한다. 
+
+
 ### 1-1. append node hostname ###
 FQDN is preferred, but if you are using AWS, you just need to set private IP with hostname.
 

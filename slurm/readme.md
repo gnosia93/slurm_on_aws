@@ -107,8 +107,14 @@ $ ubuntu ps aux | grep slurmctld
 root       46685  0.0  0.0 280808  5668 ?        Sl   17:02   0:00 slurmctld -vvvvvv
 ```
 
-
-
+* Master Node
+     ```
+     sudo slurmctld -D -vvvvvv
+     ```
+* Worker Node
+     ```
+     sudo slurmd -D -vvvvvv
+     ```
 
 
 
@@ -200,11 +206,11 @@ root       46685  0.0  0.0 280808  5668 ?        Sl   17:02   0:00 slurmctld -vv
 * [Starting the Daemons (optional and for debug)](https://slurm.schedmd.com/quickstart_admin.html#starting_daemons)
    * Master Node
      ```
-     slurmctld -D -vvvvvv
+     sudo slurmctld -D -vvvvvv
      ```
    * Worker Node
      ```
-     slurmd -D -vvvvvv
+     sudo slurmd -D -vvvvvv
      ```
   
 * systemd (optional): enable the appropriate services on each system:

@@ -145,12 +145,6 @@ apt search nvidia-driver
 ```
 ...
 
-nvidia-driver-560/jammy 560.35.03-0ubuntu0~gpu22.04.4 arm64
-  NVIDIA driver metapackage
-
-nvidia-driver-560-open/jammy 560.35.03-0ubuntu0~gpu22.04.4 arm64
-  NVIDIA driver (open kernel) metapackage
-
 nvidia-driver-565/jammy 565.77-0ubuntu0~gpu22.04.1 arm64
   NVIDIA driver metapackage
 

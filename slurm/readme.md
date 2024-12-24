@@ -1,10 +1,5 @@
 ## 1. [Install using apt](https://bgreat.tistory.com/185) ##
 
-* efs 마운트 정보를 fstab 에 넣어야 한다. reboot 해도 마운트 되도록 한다. 
-```
-sudo mount -t efs -o tls fs-00bec140ef39f7a3b:/ /mnt/efs
-```
-
 
 ### 1-1. append node hostname ###
 FQDN is preferred, but if you are using AWS, you just need to set private IP with hostname.
@@ -15,6 +10,11 @@ FQDN is preferred, but if you are using AWS, you just need to set private IP wit
 10.0.100.182 sle-w1
 10.0.100.20  sle-w2
 ```
+
+```
+sudo hostnamectl set-hostname ${HOST_NAME}
+```
+
 
 ### 1-2. install munge and slurm ###
 ```

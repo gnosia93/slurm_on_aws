@@ -27,9 +27,7 @@ Slurm is an open source, fault-tolerant, and highly scalable cluster management 
 * [7. training with Amazon EC2 Trn2]
 
 
-## Reference ##
 
-* https://daringfireball.net/projects/markdown/syntax#img
 
 
 
